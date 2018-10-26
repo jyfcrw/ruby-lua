@@ -15,7 +15,9 @@ class TestCallLuaFromRuby < Test::Unit::TestCase
     end
 
     should "return 12.0" do
-      assert_equal 12.0, @lua.call("string.find", "Hello from Lua", "Lua")
+      i, j = @lua.call("string.find", "Hello from Lua", "Lua")
+      assert_equal 12.0, i
+      assert_equal 14.0, j
     end
 
     should "return 8.0" do

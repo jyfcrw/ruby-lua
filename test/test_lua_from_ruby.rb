@@ -23,8 +23,10 @@ class TestCallLuaFromRuby < Test::Unit::TestCase
       assert_equal 1.0, @lua.call(true, "one")
     end
 
-    should "return 2.0" do
-      assert_equal 2.0, @lua.call(true, "two")
+    should "return 2 and 3" do
+      a, b = @lua.call(true, "two")
+      assert_equal 2, a 
+      assert_equal 3, b 
     end
 
     should "return the given value" do

@@ -3,7 +3,7 @@ module Language
     class Function
       attr_accessor :lua, :fname
 
-      def initialize(lua = NIL, fname = NIL)
+      def initialize(lua = nil, fname = nil)
         @lua = lua
         @fname = fname
       end

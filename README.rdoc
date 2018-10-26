@@ -73,6 +73,16 @@ Ruby/Lua adds the following new method to Lua :
 
 In your Lua code, call ruby_function.
 
+== Known Issue
+
+1. Lua table will be treated as Ruby array when keys are 1, 2, ... And <nil> value in Ruby array will be lost back from Lua.
+2. Ruby hash with Symbol keys, those keys will be converted to String back from Lua.  
+
+== Reference
+
+API manual: https://www.lua.org/manual/5.1/manual.html
+Ruby C manual: https://silverhammermba.github.io/emberb/c/
+
 == Contributing to ruby-lua
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet

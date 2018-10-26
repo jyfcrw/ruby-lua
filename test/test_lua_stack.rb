@@ -21,7 +21,7 @@ class TestLuaStack < Test::Unit::TestCase
       assert_equal "Hello", @lua.pop
       assert_equal 0, @lua.stack_size
 
-      assert_equal NIL, @lua.pop
+      assert_equal nil, @lua.pop
       assert_equal 0, @lua.stack_size
     end
 
