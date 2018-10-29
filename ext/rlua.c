@@ -212,7 +212,11 @@ static VALUE lua_GetVarFromStack(lua_State *L) {
           iIsArray = 0;
         }
 
-        rb_hash_aset(RCod,vTableKey,vTableValue);
+        if (TYPE(vTableKey) == T_STRING && strcmp(StringValueCStr(vTableKey), "__classname") == 0) {
+          // omit "__classname" key
+        } else {
+          rb_hash_aset(RCod,vTableKey,vTableValue);
+        }
       }
 
       if (iIsArray > 0)
