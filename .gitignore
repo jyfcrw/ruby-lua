@@ -19,7 +19,8 @@ pkg
 .rake_tasks
 
 # For ext
-Makefile
+ruby-lua-*.gem
+ext/Makefile
 ext/config.h
 *.bundle
 *.so
