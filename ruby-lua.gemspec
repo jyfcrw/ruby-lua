@@ -13,8 +13,8 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/glejeune/ruby-lua"
   s.license  = "MIT"
 
-  s.files      = `git ls-files`.split("\n")
-  s.test_files = `git ls-files -- test/*`.split("\n")
+  s.files      = `find . -type f`.split("\n")
+  s.test_files = `find test/ -type f`.split("\n")
   s.extra_rdoc_files = ["LICENSE.txt","README.rdoc"]
   s.extensions       = ["ext/extconf.rb"]
   s.require_paths    = ["lib"]

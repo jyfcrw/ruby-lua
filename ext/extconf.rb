@@ -35,7 +35,7 @@ elsif ex = find_executable( "lua-config" )
   $LDFLAGS << ' ' + `#{ex} --libs`.chomp
   $CFLAGS << ' ' + `#{ex} --include`.chomp
 elsif ex = find_executable( "pkg-config" )
-  ["lua", "lua5.1", "lua5.2"].any? do |l|
+  ["lua", "lua5.1", "lua5.2", "lua5.3"].any? do |l|
     ldf = `#{ex} --libs #{l}`.chomp
     cf = `#{ex} --cflags #{l}`.chomp
     next false if ldf.empty? or cf.empty?
